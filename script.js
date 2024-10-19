@@ -1,23 +1,24 @@
-let playerPick = prompt("Enter your move");
+let playerPick = prompt("Enter S, W or G");
 let cpuI = Math.floor(Math.random() * 3);
 let cpu = ["S","W","G"][cpuI]
 
 const match = (cpu, playerPick) => {
     if(cpu === playerPick){
-        return 0;
+        return "Match tied";
     } else if(cpu === "S" && playerPick === "W"){
-        return "cpu"
+        return "computer bot"
     } else if(cpu === "S" && playerPick === "G"){
         return "user"
     } else if(cpu === "G" && playerPick === "W"){
         return "user"
     } else if(cpu === "G" && playerPick === "S"){
-        return "cpu"
+        return "computer bot"
     } else if(cpu === "W" && playerPick === "S"){
         return "user"
     } else if(cpu === "W" && playerPick === "G"){
-        return "cpu"
+        return "computer bot"
     }
 }
 
-match(cpu, playerPick)
+let result = match(cpu, playerPick)
+document.write(`Your pick : ${playerPick} <br> Computer's pick : ${cpu} <br> The winner is :  ${result}`);
