@@ -1,4 +1,4 @@
-let playerPick = prompt("Enter S, W or G");
+let playerPick = prompt("Enter in capital letters S, W or G");
 let cpuI = Math.floor(Math.random() * 3);
 let cpu = ["S","W","G"][cpuI]
 
